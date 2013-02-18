@@ -1,3 +1,3 @@
 class people::natewalck {
-  notify { 'This is Nate stuff, mind your bidness': }
+  notify { 'This is Nates stuff mind your bidness': }
 }
