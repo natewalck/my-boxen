@@ -1,3 +1,3 @@
-class people::glarizza {
-  notify { 'This is Nate's stuff, mind your bidness...': }
+class people::natewalck {
+  notify { 'This is Nate stuff, mind your bidness': }
 }
