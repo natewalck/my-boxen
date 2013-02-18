@@ -1,3 +1,4 @@
 class people::natewalck {
-  notify { 'This is Nates stuff mind your bidness': }
+  # Notfiy is for debugging purposes
+  #notify { 'This is Nates stuff, mind your bidness': }
 }
