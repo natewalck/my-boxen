@@ -3,7 +3,7 @@ class people::natewalck::applications {
   include chrome
   include spotify
   include onepassword
-  include macvim
+  #include macvim
   include iterm2::stable
   include dropbox
   include gitx
