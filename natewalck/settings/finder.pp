@@ -20,6 +20,15 @@ class people::natewalck::settings::finder {
     notify     => Exec['Restart Finder'],
   }
 
+  property_list_key { 'Show Mounted Servers':
+    ensure     => present,
+    path       => "${my_homedir}/Library/Preferences/com.apple.finder.plist",
+    key        => 'ShowMountedServersOnDesktop',
+    value      => true,
+    value_type => 'boolean',
+    notify     => Exec['Restart Finder'],
+  }
+
   exec { 'Restart Finder':
     command     => '/usr/bin/killall -HUP Finder',
     refreshonly => true,
@@ -30,6 +39,7 @@ class people::natewalck::settings::finder {
     require => [
                  Property_list_key['Show External Drives'],
                  Property_list_key['Show Hard Drives'],
+                 Property_list_key['Show Mounted Servers'],
                ],
     path    => "${my_homedir}/Library/Preferences/com.apple.finder.plist",
     mode    => '0600',
