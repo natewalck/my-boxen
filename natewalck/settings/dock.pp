@@ -1,4 +1,4 @@
-class people::natewalck::plist-settings {
+class people::natewalck::settings::dock {
 
   $my_homedir = "/Users/${::luser}"
 

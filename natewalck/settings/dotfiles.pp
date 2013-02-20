@@ -1,4 +1,4 @@
-class people::natewalck::dotfile-settings {
+class people::natewalck::settings::dotfiles {
 
   $my_homedir = "/Users/${::luser}"
 
