@@ -8,4 +8,14 @@ class people::natewalck::applications {
   include dropbox
   include gitx
   include flux
+
+  package { 'CoRD':
+    source         => 'http://iweb.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip',
+    provider => compressed_app,
+  }
+
+  plistckage { 'Crashplan':
+    source           => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.2.1_Mac.dmg',
+    provider => pkgdmg,
+  }
 }
