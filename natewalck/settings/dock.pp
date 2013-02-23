@@ -25,4 +25,24 @@ class people::natewalck::settings::dock {
     mode    => '0600',
     notify     => Exec['Restart the Dock'],
   }
+
+  include dockutil
+
+  dockutil::item { 'add chrome':
+    item     => "/Applications/Google Chrome.app",
+    label    => "Google Chrome",
+    position => 1,
+    action   => "add",
+    require  => Class['chrome'],
+  }
+
+  dockutil::item { 'Add iTerm':
+    item     => "/Applications/iTerm.app",
+    label    => "iTerm",
+    action   => "add",
+    position => 2,
+    require  => Class['iterm2::dev'],
+  }
+
+
 }
