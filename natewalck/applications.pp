@@ -15,7 +15,7 @@ class people::natewalck::applications {
   }
 
   plistckage { 'Crashplan':
-    source           => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.2.1_Mac.dmg',
+    source           => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.4.1_Mac.dmg',
     provider => pkgdmg,
   }
 }
