@@ -10,6 +10,10 @@ class people::natewalck::settings::dotfiles (
     source => 'natewalck/dotfiles',
   }
 
+  repository { "${my_sourcedir}/oh-my-zsh":
+    source => 'natewalck/oh-my-zsh',
+  }
+
   exec { "Clone vim Settings":  
     command => "git clone --recursive https://github.com/natewalck/vim.git ${my_homedir}/.vim",
     creates => "${my_homedir}/.vim",
@@ -34,4 +38,16 @@ class people::natewalck::settings::dotfiles (
     require => Repository["${my_sourcedir}/dotfiles"],
     }
 
+  file { "${my_homedir}/.zshrc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/.zshrc",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "${my_homedir}/.oh-my-zsh":
+    ensure  => link,
+    target  => "${my_sourcedir}/oh-my-zsh",
+    require => Repository["${my_sourcedir}/oh-my-zsh"],
+  }
 }

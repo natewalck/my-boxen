@@ -14,6 +14,8 @@ class people::natewalck::applications (
   include gitx
   include flux
 
+  package { 'zsh': }
+
   package { 'CoRD':
     source         => 'http://iweb.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip',
     provider => compressed_app,
