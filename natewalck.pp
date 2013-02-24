@@ -5,6 +5,7 @@ class people::natewalck {
   include people::natewalck::settings::finder
   include people::natewalck::settings::globalprefs
   include people::natewalck::settings::dotfiles
+  include people::natewalck::settings::misc
   # Notfiy is for debugging purposes
   #notify { 'This is Nates stuff, mind your bidness': }
 }
