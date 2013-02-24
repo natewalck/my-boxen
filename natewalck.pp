@@ -1,4 +1,5 @@
 class people::natewalck {
+  include people::natewalck::params
   include people::natewalck::applications
   include people::natewalck::settings::dock
   include people::natewalck::settings::finder

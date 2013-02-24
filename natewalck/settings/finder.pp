@@ -1,6 +1,8 @@
-class people::natewalck::settings::finder {
-
-  $my_homedir = "/Users/${::luser}"
+class people::natewalck::settings::finder  (
+  $my_homedir   = $people::natewalck::params::my_homedir,
+  $my_sourcedir = $people::natewalck::params::my_sourcedir,
+  $my_username  = $people::natewalck::params::my_username
+  ) {
 
   property_list_key { 'Show External Drives':
     ensure     => present,

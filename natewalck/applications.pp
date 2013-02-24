@@ -1,4 +1,9 @@
-class people::natewalck::applications {
+class people::natewalck::applications (
+  $my_homedir   = $people::natewalck::params::my_homedir,
+  $my_sourcedir = $people::natewalck::params::my_sourcedir,
+  $my_username  = $people::natewalck::params::my_username
+) {
+
   include minecraft
   include chrome
   include spotify
