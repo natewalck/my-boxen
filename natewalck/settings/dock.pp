@@ -28,7 +28,7 @@ class people::natewalck::settings::dock {
 
   include dockutil
 
-  dockutil::item { 'add chrome':
+  dockutil::item { 'Add Chrome':
     item     => "/Applications/Google Chrome.app",
     label    => "Google Chrome",
     position => 1,
@@ -36,13 +36,21 @@ class people::natewalck::settings::dock {
     require  => Class['chrome'],
   }
 
+
+  dockutil::item { 'Add Adium':
+    item     => "/Applications/Adium.app",
+    label    => "Adium",
+    action   => "add",
+    position => 2,
+    require  => Package['Adium'],
+  }
+
   dockutil::item { 'Add iTerm':
     item     => "/Applications/iTerm.app",
     label    => "iTerm",
     action   => "add",
-    position => 2,
+    position => 3,
     require  => Class['iterm2::dev'],
   }
-
 
 }
