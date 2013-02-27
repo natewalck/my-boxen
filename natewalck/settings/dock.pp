@@ -47,11 +47,25 @@ class people::natewalck::settings::dock (
     require  => Package['Adium'],
   }
 
+  dockutil::item { 'Add Tweetbot':
+    item     => "/Applications/Tweetbot.app",
+    label    => "Tweetbot",
+    action   => "add",
+    position => 3,
+  }
+
+  dockutil::item { 'Add Textual':
+    item     => "/Applications/Textual.app",
+    label    => "Textual",
+    action   => "add",
+    position => 4,
+  }
+
   dockutil::item { 'Add iTerm':
     item     => "/Applications/iTerm.app",
     label    => "iTerm",
     action   => "add",
-    position => 3,
+    position => 5,
     require  => Class['iterm2::dev'],
   }
 
