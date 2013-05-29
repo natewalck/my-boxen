@@ -13,6 +13,15 @@ class people::natewalck::settings::dock (
     notify     => Exec['Restart the Dock'],
   }
 
+  property_list_key { 'Disable Dashboard':
+    ensure     => present,
+    path       => "${my_homedir}/Library/Preferences/com.apple.dashboard.plist",
+    key        => 'mcx-disabled',
+    value      => true,
+    value_type => 'boolean',
+    notify     => Exec['Restart the Dock'],
+  }
+
   exec { 'Restart the Dock':
     command     => '/usr/bin/killall -HUP Dock',
     refreshonly => true,
