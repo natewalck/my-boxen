@@ -13,7 +13,6 @@ class people::natewalck::applications (
   include dropbox
   include gitx
   include flux
-  include packer
 
   package { 'zsh': }
 
