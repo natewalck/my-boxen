@@ -7,4 +7,5 @@ class people::natewalck {
   include people::natewalck::settings::dotfiles
   include people::natewalck::settings::misc
   include people::natewalck::settings::commandline
+  include people::natewalck::settings::symlinks
 }
