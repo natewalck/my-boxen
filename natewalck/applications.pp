@@ -51,11 +51,6 @@ class people::natewalck::applications (
     provider => appdmg,
   }
 
-  package { 'owncloud':
-    source   => 'http://download.owncloud.com/download/ownCloud-1.2.0.dmg',
-    provider => appdmg,
-  }
-
   package { 'Skype':
     source   => 'http://download.skype.com/macosx/Skype_6.2.0.1117.dmg',
     provider => appdmg,
@@ -63,6 +58,11 @@ class people::natewalck::applications (
 
   package { 'Tunnelblick':
     source   => 'https://tunnelblick.googlecode.com/files/Tunnelblick_3.3beta21b.dmg',
+    provider => appdmg,
+  }
+
+  package { 'SublimeText3':
+    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203047.dmg',
     provider => appdmg,
   }
 }
