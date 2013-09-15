@@ -4,6 +4,8 @@ class people::natewalck::settings::misc (
   $my_username  = $people::natewalck::params::my_username
   ) {
 
+  include osx::no_network_dsstores
+
   property_list_key { 'Show Battery Percent':
     ensure     => present,
     path       => "${my_homedir}/Library/Preferences/com.apple.menuextra.battery.plist",

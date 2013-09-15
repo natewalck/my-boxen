@@ -4,6 +4,11 @@ class people::natewalck::settings::globalprefs (
   $my_username  = $people::natewalck::params::my_username
   ) {
 
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
+
   property_list_key { 'Double Click Minimize':
     ensure     => present,
     path       => "${my_homedir}/Library/Preferences/.GlobalPreferences.plist",

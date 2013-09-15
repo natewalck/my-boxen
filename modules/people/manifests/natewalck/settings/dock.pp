@@ -4,6 +4,8 @@ class people::natewalck::settings::dock (
   $my_username  = $people::natewalck::params::my_username
   ) {
 
+  include osx::dock::dim_hidden_apps
+
   property_list_key { 'Lower Right Hotcorner - Screen Saver':
     ensure     => present,
     path       => "${my_homedir}/Library/Preferences/com.apple.dock.plist",

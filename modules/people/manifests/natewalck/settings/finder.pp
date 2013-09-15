@@ -5,6 +5,7 @@ class people::natewalck::settings::finder  (
   ) {
 
   include osx::finder::show_all_on_desktop
+  include osx::finder::unhide_library
 
   exec { 'Restart Finder':
     command     => '/usr/bin/killall -HUP Finder',
