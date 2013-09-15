@@ -4,10 +4,10 @@ class people::natewalck::settings::commandline (
   $my_username  = $people::natewalck::params::my_username
   ) {
 
-    osx_chsh { $::luser:
-      shell   => '/opt/boxen/homebrew/bin/zsh',
-      require => Package['zsh'],
-    }
+    #osx_chsh { $::luser:
+    #  shell   => '/opt/boxen/homebrew/bin/zsh',
+    #  require => Package['zsh'],
+    #}
 
     file_line { 'add zsh to /etc/shells':
       path    => '/etc/shells',
