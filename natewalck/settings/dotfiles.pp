@@ -38,6 +38,13 @@ class people::natewalck::settings::dotfiles (
     require => Repository["${my_sourcedir}/dotfiles"],
     }
 
+  file { "${my_homedir}/.zephyros.py":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/.zephyros.py",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
   file { "${my_homedir}/.zshrc":
     ensure  => link,
     mode    => '0644',
