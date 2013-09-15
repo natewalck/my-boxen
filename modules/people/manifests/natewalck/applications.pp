@@ -12,7 +12,7 @@ class people::natewalck::applications (
   include iterm2::dev
   include minecraft
   include mumble
-  include omnifocus 
+  include omnifocus
   include spotify
   include vmware_fusion
 
@@ -66,6 +66,11 @@ class people::natewalck::applications (
   package { 'Tunnelblick':
     source   => 'https://tunnelblick.googlecode.com/files/Tunnelblick_3.3beta21b.dmg',
     provider => appdmg,
+  }
+
+  package { "Wireshark":
+    source   => 'http://wiresharkdownloads.riverbed.com/wireshark/osx/Wireshark%201.10.2%20Intel%2064.dmg',
+    provider => pkgdmg,
   }
 
   package { 'Zephyros':
