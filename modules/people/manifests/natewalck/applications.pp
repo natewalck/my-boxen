@@ -12,6 +12,7 @@ class people::natewalck::applications (
   include iterm2::dev
   include minecraft
   include mumble
+  include omnifocus 
   include spotify
   include vmware_fusion
 
