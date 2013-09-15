@@ -11,6 +11,7 @@ class people::natewalck::applications (
   include gitx
   include iterm2::dev
   include minecraft
+  include mumble
   include spotify
 
   package { 'zsh': }
