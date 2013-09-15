@@ -8,7 +8,6 @@ class people::natewalck::applications (
   include chrome
   include spotify
   include onepassword
-  include macvim
   include iterm2::dev
   include dropbox
   include gitx
