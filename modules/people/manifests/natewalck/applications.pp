@@ -13,6 +13,7 @@ class people::natewalck::applications (
   include minecraft
   include mumble
   include spotify
+  include vmware_fusion
 
   package { 'zsh': }
 

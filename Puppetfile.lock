@@ -119,6 +119,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-vmware_fusion
+  specs:
+    vmware_fusion (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -166,5 +171,6 @@ DEPENDENCIES
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  vmware_fusion (= 1.0.0)
   xquartz (= 1.1.0)
 
