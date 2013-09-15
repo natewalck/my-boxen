@@ -67,4 +67,8 @@ class people::natewalck::applications (
     provider => appdmg,
   }
 
+  package { 'Zephyros':
+    source => 'https://raw.github.com/sdegutis/zephyros/master/Builds/Zephyros-LATEST.app.tar.gz',
+    provider => compressed_app,
+  }
 }
