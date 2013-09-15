@@ -14,7 +14,7 @@ class people::natewalck::settings::dotfiles (
     source => 'natewalck/oh-my-zsh',
   }
 
-  exec { "Clone vim Settings":  
+  exec { "Clone vim Settings":
     command => "git clone --recursive https://github.com/natewalck/vim.git ${my_homedir}/.vim",
     creates => "${my_homedir}/.vim",
   }
