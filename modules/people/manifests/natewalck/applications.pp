@@ -4,26 +4,16 @@ class people::natewalck::applications (
   $my_username  = $people::natewalck::params::my_username
 ) {
 
-  include minecraft
-  include chrome
-  include spotify
   include onepassword
-  include iterm2::dev
+  include chrome
   include dropbox
-  include gitx
   include flux
+  include gitx
+  include iterm2::dev
+  include minecraft
+  include spotify
 
   package { 'zsh': }
-
-  package { 'CoRD':
-    source         => 'http://iweb.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip',
-    provider => compressed_app,
-  }
-
-  package { 'Crashplan':
-    source           => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.4.1_Mac.dmg',
-    provider => pkgdmg,
-  }
 
   package { 'Adium':
     source   => 'http://downloads.sourceforge.net/project/adium/Adium_1.5.4.dmg',
@@ -33,6 +23,16 @@ class people::natewalck::applications (
   package { 'AppCleaner':
     source   => 'http://www.freemacsoft.net/downloads/AppCleaner_2.1.zip',
     provider => compressed_app,
+  }
+
+  package { 'CoRD':
+    source         => 'http://iweb.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip',
+    provider => compressed_app,
+  }
+
+  package { 'Crashplan':
+    source           => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.4.1_Mac.dmg',
+    provider => pkgdmg,
   }
 
   package { 'CyberDuck':
@@ -55,13 +55,14 @@ class people::natewalck::applications (
     provider => appdmg,
   }
 
+  package { 'SublimeText3':
+    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203047.dmg',
+    provider => appdmg,
+  }
+
   package { 'Tunnelblick':
     source   => 'https://tunnelblick.googlecode.com/files/Tunnelblick_3.3beta21b.dmg',
     provider => appdmg,
   }
 
-  package { 'SublimeText3':
-    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203047.dmg',
-    provider => appdmg,
-  }
 }
